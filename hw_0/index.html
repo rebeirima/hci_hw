@@ -1,32 +1,49 @@
+ <!-- Tutorial Followed: https://www.youtube.com/watch?v=q0-N_w0Op84 -->
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">  
-    <title>Todo List App in JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Iconscout Link For Icons -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="task-input">
-        <img src="bars-icon.svg" alt="icon">
-        <input type="text" placeholder="Add a new task">
-      </div>
-      <div class="controls">
-        <div class="filters">
-          <span class="active" id="all">All</span>
-          <span id="pending">Pending</span>
-          <span id="completed">Completed</span>
+    <!-- Google Fonts API, so we can directly import our fonts from google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Linked the specific font i wanted, wanted a handwritten type feel for the app-->
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css, allow us to use diffrent icons in our program (to look nicer)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link our style sheet-->
+    <link rel="stylesheet" href="./styles.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <header>
+        <h1>To Do List App</h1>
+    </header>
+    <form action="">
+        <!-- Creates a form, where users are able to type in text of their todo list inputs-->
+        <input type="text" class="todo-input">
+        <!-- Creates a button next to the input form where you are able to add your todo list inputs-->
+        <button class="todo-button" type="submit">
+            <!-- How the button icon looks like -->
+            <i class="fas fa-plus-circle fa-lg"></i>
+        </button>
+        <div class="select">
+            <!-- Filters all of our inputs "todo", for the completed ones or incomplete or all todo list items-->
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
         </div>
-        <button class="clear-btn">Clear All</button>
-      </div>
-      <ul class="task-box"></ul>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
     </div>
-
-    <script src="script.js"></script>
-
-  </body>
+    <!-- import my javascript file -->   
+    <script src="./script.js"></script>
+    
+</body>
 </html>
