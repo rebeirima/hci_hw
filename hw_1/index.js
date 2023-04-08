@@ -27,17 +27,29 @@ app.listen(3000, () => console.log("Server Up and running"));
 //.ejs files so we can use them as a template
 app.set("view engine", "ejs");
 
+//I was following the tutorial, however I was getting the following error when implementing the GET, POST, UPDATE, and DELETE functions: MongooseError: Model.find() no longer accepts a callback at Function.find 
+// indicating that the find() method no longer accepts a callback function as an argument. in the previous code, they were passing a callback function to the find() method, but this is no longer supported
+
 //get method 
 //used when relatively non-confidential information is passed and info can be cached as well
 //used to request data from a specified resource
-app.get('/',(req, res) => {
-    res.render('todo.ejs');
-    });
+//TodoTask.find({}) returns a Promise, which is handled using the .then() method to render the view with the fetched tasks. If there's an error, the .catch() method will handle it
+app.get("/", (req, res) => {
+    TodoTask.find({})
+      .then((tasks) => {
+        res.render("todo.ejs", { todoTasks: tasks });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
 
 
 //POST METHOD
 //used to send data to a server to create/update a resource
 //when we click at the add button our app inserts data into the database
+//
 app.post('/',async (req, res) => {
     const todoTask = new TodoTask({
     content: req.body.content
@@ -50,3 +62,43 @@ app.post('/',async (req, res) => {
     }
     });
 
+//UPDATE
+//TodoTask.find({}) and TodoTask.findByIdAndUpdate(id, { content: req.body.content }) return Promises which is handled using the .then() and .catch() methods
+//First we find our id and we render the new template. Then we update our task using the method findByIdAndUpdate
+app.route("/edit/:id")
+  .get((req, res) => {
+    const id = req.params.id;
+    TodoTask.find({})
+      .then((tasks) => {
+        res.render("todoEdit.ejs", { todoTasks: tasks, idTask: id });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  })
+  .post((req, res) => {
+    const id = req.params.id;
+    TodoTask.findByIdAndUpdate(id, { content: req.body.content })
+      .then(() => {
+        res.redirect("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).send("Failed to update task");
+      });
+  });
+
+//DELETE
+//to have our delete method, we will use the method findByIdAndRemove
+app.route("/remove/:id")
+  .get((req, res) => {
+    const id = req.params.id;
+    TodoTask.findByIdAndRemove(id)
+      .then(() => {
+        res.redirect("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).send("Failed to delete task");
+      });
+  });

@@ -1,4 +1,4 @@
-//we made our collection schema and we exported so we could use it at index.js file
+//we made our collection schema and we exported so we could use it in the index.js file
 const mongoose = require('mongoose');
 const todoTaskSchema = new mongoose.Schema({
 content: {
