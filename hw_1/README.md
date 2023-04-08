@@ -1,8 +1,8 @@
-###Programming HW1: Make a To-Do App with Node.js and MongoDB
+### Programming HW1: Make a To-Do App with Node.js and MongoDB
 
 I worked my way through the To-Do App Tutorial provided: https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-1-c645c7a27583 
 
-##Instructions to use this App: 
+## Instructions to use this App: 
 1. Make sure you have Node.js and MongoDB installed on your computer
 2. Download or clone the project files from this GitHub repository
 3. Open a terminal navigate to the project directory
@@ -14,7 +14,7 @@ I worked my way through the To-Do App Tutorial provided: https://medium.com/@dio
 Once you have the prototype up and running, you can create new tasks, edit existing tasks, and mark tasks as completed. 
 
 
-#Reflection
+# Reflection
 What are the significant software concepts that this combination of technologies has that plain HTML, CSS, and JS does not? Or that they handle significantly differently?
 
 The combination of Node.js, Express, EJS, and MongoDB brings several important software concepts that are not present in plain HTML, CSS, and JavaScript or that they handle significantly differently.
