@@ -3,9 +3,9 @@
 I worked my way through the To-Do App Tutorial provided: https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-1-c645c7a27583 
 
 ## Instructions to use this App: 
-1. Make sure you have Node.js and MongoDB installed on your computer
-2. Download or clone the project files from this GitHub repository within this folder "hw_1"
-3. Open a terminal navigate to the project directory
+1. Make sure you have Node.js, Express, mongoose, ejs and dotenv installed on your computer
+2. Download or clone the project files from this GitHub repository
+3. Open a terminal navigate to the project directory "hw_1"
 4. Install the project dependencies by running the command "npm install" 
 5. Start the MongoDB server by running the command "mongod"
 6. Start the Node.js server by running the command "node index.js"
