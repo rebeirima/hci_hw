@@ -4,7 +4,7 @@ I worked my way through the To-Do App Tutorial provided: https://medium.com/@dio
 
 ## Instructions to use this App: 
 1. Make sure you have Node.js and MongoDB installed on your computer
-2. Download or clone the project files from this GitHub repository
+2. Download or clone the project files from this GitHub repository within this folder "hw_1"
 3. Open a terminal navigate to the project directory
 4. Install the project dependencies by running the command "npm install" 
 5. Start the MongoDB server by running the command "mongod"
