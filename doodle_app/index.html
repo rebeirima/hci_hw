@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts API, so we can directly import our fonts from google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Linked the specific font i wanted, wanted a handwritten type feel for the app-->
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css, allow us to use diffrent icons in our program (to look nicer)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link our style sheet-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Doodle App</title>
+</head>
+
+<body>
+    <div class="todo-container">
+        <title_text>Doodle App</title_text>
+        <table>
+            <tr>
+              <th><th_day> User <br></th_day></th>
+              <th><th_day>MON <br></th_day>April 10 <br><th_time>12:45 PM - 2:00 PM</th_time></th>
+              <th><th_day>TUE <br></th_day> April 11 <br><th_time>1:45 PM - 4:00 PM</th_time></th>
+              <th><th_day>THUR <br></th_day> April 13 <br><th_time>12:30 PM - 2:30 PM</th_time></th>
+              <th><th_day>MON <br></th_day> April 17 <br><th_time>8:45 AM - 10:00 AM</th_time></th>
+              <th><th_day>WED <br></th_day> April 19 <br><th_time>12:45 PM - 2:00 PM</th_time></th>
+            </tr>
+            <tr>
+                <td> <input type="text" name="name" id="name-input" placeholder="Enter name">
+                </td>
+                <td>  <label class="container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                    </label>
+                </td>
+            <td>  <label class="container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>  <label class="container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>  <label class="container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <td>  <label class="container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            </tr>
+            <tr>
+                <td> Joe
+              </td>
+              <td>  
+              </td>
+              <td>  
+                <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td>  <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td>  <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td> 
+              </td>
+              </tr>
+              <tr>
+                <td> Megan
+              </td>
+              <td>  <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td>  
+              </td>
+              <td>  <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td> <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td>  <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              </tr>
+          </table>
+</div>
+</body>
+<script>
+    const nameInput = document.getElementById("name-input");
+  
+    nameInput.addEventListener("keydown", function(event) {
+      if (event.keyCode === 13) { // 13 is the key code for the enter key
+        const name = nameInput.value;
+        localStorage.setItem("name", name);
+      }
+    });
+  </script>
+</html>
+
+  
