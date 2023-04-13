@@ -18,10 +18,12 @@
 
 <body>
     <div class="todo-container">
-        <title_text>Doodle App</title_text>
+        <title_text>Doodle Poll</title_text>
+        <h4>Select your preferred times. We’ll let you know when the organizer picks the best time</h4>
         <table>
+            
             <tr>
-              <th><th_day> User <br></th_day></th>
+              <th>Participants</th>
               <th><th_day>MON <br></th_day>April 10 <br><th_time>12:45 PM - 2:00 PM</th_time></th>
               <th><th_day>TUE <br></th_day> April 11 <br><th_time>1:45 PM - 4:00 PM</th_time></th>
               <th><th_day>THUR <br></th_day> April 13 <br><th_time>12:30 PM - 2:30 PM</th_time></th>
@@ -29,34 +31,66 @@
               <th><th_day>WED <br></th_day> April 19 <br><th_time>12:45 PM - 2:00 PM</th_time></th>
             </tr>
             <tr>
-                <td> <input type="text" name="name" id="name-input" placeholder="Enter name">
+                <td></td>
+                <td><span>
+                    <i class="fas fa-users"></i>
+                    <p id="counter1" style="display: inline-block;">2</p>
+                  </span></td>
+                  <td><span>
+                    <i class="fas fa-users"></i>
+                    <p id="counter2" style="display: inline-block;">1</p>
+                  </span></td>
+                  <td><span>
+                    <i class="fas fa-users"></i>
+                    <p id="counter3" style="display: inline-block;">2</p>
+                  </span></td>
+                  <td><span>
+                    <i class="fas fa-users"></i>
+                    <p id="counter4" style="display: inline-block;">3</p>
+                  </span></td>
+                  <td><span>
+                    <i class="fas fa-users"></i>
+                    <p id="counter5" style="display: inline-block;">2</p>
+                  </span></td>
+              </tr>
+            <tr>
+                <td>
+                    <div id="name-container">
+                        <input type="text" name="name" id="name-input" placeholder="Your Name">
+                      </div>
+                      <div id="saved-name-container" style="display:none;"></div>
                 </td>
-                <td>  <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                    </label>
+                <td>
+                  <label class="container">
+                    <input type="checkbox" id="availability-0-0">
+                    <span class="checkmark"></span>
+                  </label>
                 </td>
-            <td>  <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </td>
-            <td>  <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </td>
-            <td>  <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </td>
-            <td>  <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </td>
-            </tr>
+                <td>
+                  <label class="container">
+                    <input type="checkbox" id="availability-0-1">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="container">
+                    <input type="checkbox" id="availability-0-2">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="container">
+                    <input type="checkbox" id="availability-0-3">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="container">
+                    <input type="checkbox" id="availability-0-4">
+                    <span class="checkmark"></span>
+                  </label>
+                </td>
+              </tr>
             <tr>
                 <td> Joe
               </td>
@@ -86,19 +120,32 @@
               <td>  <span class="checkmark"><i class="fas fa-check"></span>
               </td>
               </tr>
-          </table>
+              <tr>
+                <td> Rachel
+              </td>
+              
+              <td>  
+                <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td>  
+                
+              </td>
+              <td>  
+              </td>
+              <td>  <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              <td> 
+                <span class="checkmark"><i class="fas fa-check"></span>
+              </td>
+              </tr>
+          </table><br>
+          <button type="submit" id="submit-btn" class="btn default">Submit Your Response</button><br>
+          <button id="clear-btn" class="btn default">Clear</button>
 </div>
 </body>
-<script>
-    const nameInput = document.getElementById("name-input");
-  
-    nameInput.addEventListener("keydown", function(event) {
-      if (event.keyCode === 13) { // 13 is the key code for the enter key
-        const name = nameInput.value;
-        localStorage.setItem("name", name);
-      }
-    });
-  </script>
+<!-- import my javascript file -->   
+<script src="./script.js"></script>
+
 </html>
 
   
