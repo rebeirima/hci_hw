@@ -12,3 +12,8 @@ This app is a minimum user-testable implementation of a user's experience enteri
 2. Users can submit their name and time slots selected, and this will be saved in the computers local storage. So even if the user refreshes the page, their form entry will still be visable
 3. If the user clicks submit before they enter their name in the participant box, an error will appear and will not submit their selected time slots until the user adds their name
 4. Once the user clicks submit preferences, the counter updates to show the new updated amount of participants selecting each time slot. 
+
+## Instructions to open the prototype:
+1. To use this app, download and save the ZIP file from this repository to your computer and extract the contents to a folder
+2. Navigate to the extracted folder and look for the index.html file
+3. Double-click on the main HTML file to open it in your default web browser
