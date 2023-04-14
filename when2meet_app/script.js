@@ -1,3 +1,13 @@
+   //trying to do the mouse over feature 
+   const displayText = document.getElementById('display-text');
+
+   //const displayText = document.getElementById('display-text');
+  // displayText.id = 'display-text'; 
+  // document.body.appendChild(displayText);
+
+  // Get all the cells in the table
+  const table2 = document.getElementById("table-2");
+const cells = document.querySelectorAll('td');
 
 
   function handleButtonClick() {
@@ -26,40 +36,48 @@ function handleCellClick(cell) {
     console.log(matchingCell.classList)
     if(matchingCell.classList.contains("selected_cell_rima")) {
         matchingCell.classList.toggle("selected_cell_rima_user");
+        displayText.innerText = 'Available: You and Rima   Unavailable:';
     }
     else {
     //add the "unselected_cell" class to the matching cell in the second table
     matchingCell.classList.toggle("selected_cell_group");
+    displayText.innerText = 'Available: You    Unavailable: Rima';
     }
 
     // Toggle the "selected_cell" class on the matching cell in the second table
     //matchingCell.classList.toggle("selected_cell_group");
+    // Check the class of the clicked cell and display the appropriate text
   
 }
   
-    
-  
 
 
-//trying to do the mouse over feature 
-const table2 = document.getElementById("table-2");
-const statusDiv = document.getElementById("availability-status");
-
-// Add event listener for mouseover on the table
-table2.addEventListener("mouseover", (event) => {
-    // Get the target element of the event
-    const target = event.target;
-   
-      
-      // Set the availability status text
-      statusDiv.textContent = "rima is available";
-
+// Loop through each cell and add a mouseover event listener
+cells.forEach(cell => {
+  cell.addEventListener('mouseover', () => {
+    // Check the class of the cell and display the appropriate text
+    if (cell.classList.contains('unselected_cell_group')) {
+      // Display text for class1 cells
+      displayText.innerText = 'Available:       Unavailable: You and Rima';
+      displayTextOnScreen(displayText.innerText);
+      console.log('This is a unselected_cell_group cell');
+    } else if (cell.classList.contains('selected_cell_rima')) {
+      // Display text for class2 cells
+      displayText.innerText = 'Available: Rima Unavailable: You';
+      displayTextOnScreen(displayText.innerText);
+      console.log('This is a selected_cell_rima cell');
+    }else if (cell.classList.contains('selected_cell_rima_user')) {
+        // Display text for class2 cells
+        displayText.innerText = 'Available: You and Rima   Unavailable:';
+        displayTextOnScreen(displayText.innerText);
+        console.log('This is a selected_cell_rima_user cell');
+      }
+    else {
+      // Display default text for other cells
+      displayText.innerText = 'Available: You    Unavailable: Rima';
+      displayTextOnScreen(displayText.innerText);
+      console.log('Available: You Unavailable: Rima');
+    }
   });
+});
 
-  
-// Add event listener for mouseout on the table
-table2.addEventListener("mouseout", (event) => {
-    // Clear the availability status text
-    statusDiv.textContent = "";
-  });
-  
