@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts API, so we can directly import our fonts from google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Linked the specific font i wanted, wanted a handwritten type feel for the app-->
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css, allow us to use diffrent icons in our program (to look nicer)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link our style sheet-->
+    <link rel="stylesheet" href="./styles.css">
+    <title>When 2 Meet App</title>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div>
+            <label for="name-input">Enter your name:</label>
+            <input type="text" id="name-input">
+            <button onclick="saveName()">Save</button>
+          </div>
+          <div class="availability-text">
+            <h2><span id="name-placeholder">Name</span>'s Availability</h2>
+            <h5>Click to toggle. Red is unavailable, green is available</h5>
+
+          </div>
+        </div>
+        <div class="column">
+        
+
+            <h2>Group's Availability</h2>
+            <h5>Light green, 1 person available. Dark green, 2 people available.</h5>
+        </div>
+    <div class="table-container">
+        
+  <table class="table-1">
+    <tr>
+      <th></th>
+      <th><p>April 10</p>MON</th>
+      <th><p>April 11</p>TUE</th>
+      <th><p>April 12</p>WED</th>
+      <th><p>April 15</p>SAT</th>
+      <th><p>April 19</p>WED</th>
+      <th><p>April 21</p>FRI</th>
+      <th><p>April 23</p>SUN</th>
+    </tr>
+    <tr>
+      <td>8:00 AM</td>
+      <td id=M8 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T8 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W8 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu8 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F8 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S8 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su8 class="unselected_cell" onclick="handleCellClick(this);" />
+    <tr>
+      <td>9:00 AM</td>
+      <td id=M9 class="unselected_cell" onclick="handleCellClick(this);"/>
+      <td id=T9 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W9 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu9 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F9 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S9 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su9 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>10:00 AM</td>
+      <td id=M10 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T10 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W10 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu10 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F10 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S10 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su10 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>11:00 AM</td>
+      <td id=M11 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T11 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W11 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu11 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F11 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S11 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su11 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>12:00 PM</td>
+      <td id=M12 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T12 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W12 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu12 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F12 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S12 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su12 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>1:00 PM</td>
+      <td id=M1 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T1 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W1 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu1 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F1 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S1 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su1 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>2:00 PM</td>
+      <td id=M2 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T2 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W2 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu2 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F2 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S2 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su2 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>3:00 PM</td>
+      <td id=M3 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T3 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W3 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu3 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F3 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S3 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su3 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>4:00 PM</td>
+      <td id=M4 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T4 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W4 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu4 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F4 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S4 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su4 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>5:00 PM</td>
+      <td id=M5 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T5 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W5 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu5 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F5 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S5 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su5 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>6:00 PM</td>
+      <td id=M6 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T6 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W6 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu6 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F6 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S6 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su6 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    <tr>
+      <td>7:00 PM</td>
+      <td id=M7 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=T7 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=W7 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Tu7 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=F7 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=S7 class="unselected_cell" onclick="handleCellClick(this);" />
+      <td id=Su7 class="unselected_cell" onclick="handleCellClick(this);" />
+    </tr>
+    
+  </table>
+  <table class="table-2">
+    <tr>
+      <th></th>
+      <th><p>April 10</p>MON</th>
+      <th><p>April 11</p>TUE</th>
+      <th><p>April 12</p>WED</th>
+      <th><p>April 15</p>SAT</th>
+      <th><p>April 19</p>WED</th>
+      <th><p>April 21</p>FRI</th>
+      <th><p>April 23</p>SUN</th>
+    </tr>
+    <tr>
+      <td>8:00 AM</td>
+      <td id=second_M8 class="unselected_cell_group"  />
+      <td id=second_T8 class="unselected_cell_group" />
+      <td id=second_W8 class="unselected_cell_group"  />
+      <td id=second_Tu8 class="unselected_cell_group"  />
+      <td id=second_F8 class="unselected_cell_group"  />
+      <td id=second_S8 class="unselected_cell_group"  />
+      <td id=second_Su8 class="unselected_cell_group"  />
+    <tr>
+      <td>9:00 AM</td>
+      <td id=second_M9 class="unselected_cell_group" />
+      <td id=second_T9 class="unselected_cell_group"  />
+      <td id=second_W9 class="selected_cell_rima"  />
+      <td id=second_Tu9 class="unselected_cell_group"  />
+      <td id=second_F9 class="unselected_cell_group"  />
+      <td id=second_S9 class="unselected_cell_group"  />
+      <td id=second_Su9 class="unselected_cell_group" " />
+    </tr>
+    <tr>
+      <td>10:00 AM</td>
+      <td id=second_M10 class="unselected_cell_group"  />
+      <td id=second_T10 class="unselected_cell_group"  />
+      <td id=second_W10 class="selected_cell_rima"  />
+      <td id=second_Tu10 class="unselected_cell_group"  />
+      <td id=second_F10 class="unselected_cell_group"/>
+      <td id=second_S10 class="unselected_cell_group"  />
+      <td id=second_Su10 class="unselected_cell_group"  />
+    </tr>
+    <tr>
+      <td>11:00 AM</td>
+      <td id=second_M11 class="unselected_cell_group"  />
+      <td id=second_T11 class="unselected_cell_group" />
+      <td id=second_W11 class="selected_cell_rima"  />
+      <td id=second_Tu11 class="unselected_cell_group"  />
+      <td id=second_F11 class="unselected_cell_group"  />
+      <td id=second_S11 class="unselected_cell_group"  />
+      <td id=second_Su11 class="unselected_cell_group"  />
+    </tr>
+    <tr>
+      <td>12:00 PM</td>
+      <td id=second_M12 class="unselected_cell_group"  />
+      <td id=second_T12 class="unselected_cell_group"  />
+      <td id=second_W12 class="selected_cell_rima"  />
+      <td id=second_Tu12 class="unselected_cell_group"  />
+      <td id=second_F12 class="unselected_cell_group"  />
+      <td id=second_S12 class="unselected_cell_group"  />
+      <td id=second_Su12 class="unselected_cell_group"  />
+    </tr>
+    <tr>
+      <td>1:00 PM</td>
+      <td id=second_M1 class="selected_cell_rima"  />
+      <td id=second_T1 class="unselected_cell_group"  />
+      <td id=second_W1 class="selected_cell_rima"  />
+      <td id=second_Tu1 class="unselected_cell_group"  />
+      <td id=second_F1 class="unselected_cell_group" />
+      <td id=second_S1 class="unselected_cell_group"  />
+      <td id=second_Su1 class="unselected_cell_group"  />
+    </tr>
+    <tr>
+      <td>2:00 PM</td>
+      <td id=second_M2 class="selected_cell_rima" />
+      <td id=second_T2 class="unselected_cell_group"/>
+      <td id=second_W2 class="unselected_cell_group" />
+      <td id=second_Tu2 class="unselected_cell_group"  />
+      <td id=second_F2 class="unselected_cell_group"  />
+      <td id=second_S2 class="unselected_cell_group"  />
+      <td id=second_Su2 class="selected_cell_rima"  />
+    </tr>
+    <tr>
+      <td>3:00 PM</td>
+      <td id=second_M3 class="selected_cell_rima"  />
+      <td id=second_T3 class="unselected_cell_group"  />
+      <td id=second_W3 class="unselected_cell_group" />
+      <td id=second_Tu3 class="unselected_cell_group" />
+      <td id=second_F3 class="unselected_cell_group"  />
+      <td id=second_S3 class="unselected_cell_group"  />
+      <td id=second_Su3 class="selected_cell_rima" />
+    </tr>
+    <tr>
+      <td>4:00 PM</td>
+      <td id=second_M4 class="selected_cell_rima"  />
+      <td id=second_T4 class="selected_cell_rima"  />
+      <td id=second_W4 class="selected_cell_rima" />
+      <td id=second_Tu4 class="unselected_cell_group"  />
+      <td id=second_F4 class="unselected_cell_group"  />
+      <td id=second_S4 class="selected_cell_rima"  />
+      <td id=second_Su4 class="selected_cell_rima"  />
+    </tr>
+    <tr>
+      <td>5:00 PM</td>
+      <td id=second_M5 class="unselected_cell_group"  />
+      <td id=second_T5 class="unselected_cell_group"  />
+      <td id=second_W5 class="unselected_cell_group" />
+      <td id=second_Tu5 class="unselected_cell_group"  />
+      <td id=second_F5 class="selected_cell_rima"  />
+      <td id=second_S5 class="selected_cell_rima"  />
+      <td id=second_Su5 class="selected_cell_rima" />
+    </tr>
+    <tr>
+      <td>6:00 PM</td>
+      <td id=second_M6 class="unselected_cell_group"  />
+      <td id=second_T6 class="unselected_cell_group" />
+      <td id=second_W6 class="unselected_cell_group"  />
+      <td id=second_Tu6 class="unselected_cell_group"  />
+      <td id=second_F6 class="selected_cell_rima" />
+      <td id=second_S6 class="unselected_cell_group"  />
+      <td id=second_Su6 class="unselected_cell_group" />
+    </tr>
+    <tr>
+      <td>7:00 PM</td>
+      <td id=second_M7 class="unselected_cell_group"  />
+      <td id=second_T7 class="unselected_cell_group"  />
+      <td id=second_W7 class="unselected_cell_group"  />
+      <td id=second_Tu7 class="unselected_cell_group" />
+      <td id=second_F7 class="selected_cell_rima"  />
+      <td id=second_S7 class="unselected_cell_group"  />
+      <td id=second_Su7 class="selected_cell_rima"  />
+    </tr>
+    
+  </table>
+  <div id="availability-status"></div>
+</div>
+</div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

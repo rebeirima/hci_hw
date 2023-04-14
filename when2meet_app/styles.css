@@ -1,0 +1,75 @@
+p {
+    font-size: small;
+  
+  }
+
+  .unselected_cell {
+    background-color: rgb(249, 168, 168);
+    width: 50px;
+    height: 5px;
+    border: 1px solid black;
+  }
+
+  .unselected_cell_group {
+    background-color: rgb(255, 254, 254);
+    width: 50px;
+    height: 5px;
+    border: 1px solid black;
+  }
+
+  .selected_cell_group {
+    background-color: rgba(0, 128, 0, 0.23);
+    width: 50px;
+    height: 5px;
+    border: 1px solid black;
+  }
+
+  .selected_cell_rima {
+    background-color: rgba(0, 128, 0, 0.23);
+    width: 50px;
+    height: 5px;
+    border: 1px solid black;
+  }
+  .selected_cell_rima_user {
+    background-color: rgba(0, 128, 0, 0.7);
+    width: 50px;
+    height: 5px;
+    border: 1px solid black;
+  }
+
+  .selected_cell {
+    background-color: green;
+    width: 50px;
+    height: 5px;
+    border: 1px solid black;
+  }
+
+  
+  .table-1,
+  .table-2 {
+    display: inline-block;
+    margin-right: 20px;
+    border-collapse: collapse;
+  }
+
+  .column {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+
+  td {
+    padding: 1px;
+  }
+
+  .container {
+    position: relative;
+    text-align: left;
+  }
+
+  .table-container {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+  }
