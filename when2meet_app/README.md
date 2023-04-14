@@ -10,7 +10,9 @@
 This app is a minimum user-testable implementation of a user's experience entering in their availability. There is hard coded data showing a pre-existing "when2meet" where there are 7 days where a series of time slots that a user can pick from. There is also hard coded data to reflect imaginary others' availability on the group's availabilty side.
 1. Users can enter their name and select which time slots fit with their schedule on the seven days by clicking the slots to toggle
 2. Users can submit their name and time slots selected
-4. As the user clicks the time slots that work for their schedule, the group's availabilty automatically changes. If the user clicks time slots that others in the group clicked, the time slot is displayed in a darker green.
+3. As the user clicks the time slots that work for their schedule, the group's availabilty automatically changes. If the user clicks time slots that others in the group clicked, the time slot is displayed in a darker green.
+4. When user's mouse over the cells in the group's availability schedule, text appears showing which user is available and unavailable. 
+
 
 ## Instructions to open the prototype:
 1. To use this app, download and save the ZIP file from this repository to your computer and extract the contents to a folder
