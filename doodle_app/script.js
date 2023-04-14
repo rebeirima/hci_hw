@@ -1,16 +1,16 @@
-// Get the name input element and the submit button
+//get the name input element and the submit button
 const nameInput = document.getElementById('name-input');
 const submitBtn = document.getElementById('submit-btn');
 const clearBtn = document.querySelector('#clear-btn');
 
 
-// Get the counter element
+//get the counter element
 const counter1Element = document.getElementById("counter1");
 const counter2Element = document.getElementById("counter2");
 const counter3Element = document.getElementById("counter3");
 const counter4Element = document.getElementById("counter4");
 const counter5Element = document.getElementById("counter5");
-// Set the initial counter value
+//set the initial counter value
 let counter1 = 2;
 let counter2 = 1;
 let counter3 = 2;
@@ -43,16 +43,16 @@ function updateCounters(changecounter) {
 }
 
 
-// Add a click event listener to the submit button
+//add a click event listener to the submit button
 submitBtn.addEventListener('click', function() {
 
-  // Get the name input and selected checkboxes
+  //get the name input and selected checkboxes
   const nameInput = document.getElementById('name-input');
   const checkboxes = document.querySelectorAll('input[type=checkbox]');
   const checkedCheckboxes = document.querySelectorAll('input[type=checkbox]:checked');
   const uncheckedCheckboxes = document.querySelectorAll('input[type=checkbox]:not(:checked)');
   
-  // Create an object to hold the user's data
+  //create an object to hold the user's data
   const userData = {
     name: nameInput.value,
     availability: []
@@ -67,7 +67,7 @@ submitBtn.addEventListener('click', function() {
     // continue with the rest of your code
   
   
-  // Loop through the selected checkboxes and add their values to the userData object
+  //loop through the selected checkboxes and add their values to the userData object
   checkboxes.forEach(function(checkbox) {
     if (checkbox.checked) {
       changecounter.push(1); // Add 1 to changecounter if the checkbox is checked
@@ -78,21 +78,21 @@ submitBtn.addEventListener('click', function() {
   });
   
 
-  // Save the userData object to local storage
+  //save the userData object to local storage
   localStorage.setItem('userData', JSON.stringify(userData));
   
-  // Hide the name input and show the name text instead
+  //hide the name input and show the name text instead
   nameInput.style.display = 'none';
   const nameText = document.createElement('span');
   nameText.innerText = userData.name;
   nameInput.parentElement.insertBefore(nameText, nameInput);
   
-  // Disable all checkboxes
+  //gisable all checkboxes
   checkboxes.forEach(function(checkbox) {
     checkbox.disabled = true;
   });
   
-  // Disable the submit button
+  //gisable the submit button
   submitBtn.disabled = true;
 
   // Get all unchecked checkboxes and remove their parent element
