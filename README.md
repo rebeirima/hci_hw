@@ -17,4 +17,4 @@ HW_6: Complete the To-Do Tutorial App with Meteor & Svelte - not started
 
 ## Tier 2
 doodle_app: Implement a user-testable version of Doodle <br><br>
-when2meet_app: Implement a user-testable version of When2Meet - working on
+when2meet_app: Implement a user-testable version of When2Meet 
