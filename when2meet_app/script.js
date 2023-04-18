@@ -1,4 +1,4 @@
-   //trying to do the mouse over feature 
+   //this is getting the availability text from the doc
    const displayText = document.getElementById('display-text');
 
    //const displayText = document.getElementById('display-text');
@@ -50,30 +50,30 @@ function handleCellClick(cell) {
   
 }
   
-
+ //trying to do the mouse over feature for the availabilty 
 
 // Loop through each cell and add a mouseover event listener
 cells.forEach(cell => {
   cell.addEventListener('mouseover', () => {
     // Check the class of the cell and display the appropriate text
     if (cell.classList.contains('unselected_cell_group')) {
-      // Display text for class1 cells
+      // Display text for unselected_cell_group cells
       displayText.innerText = 'Available:       Unavailable: You and Rima';
       displayTextOnScreen(displayText.innerText);
       console.log('This is a unselected_cell_group cell');
     } else if (cell.classList.contains('selected_cell_rima')) {
-      // Display text for class2 cells
+      // Display text for selected_cell_rima cells
       displayText.innerText = 'Available: Rima Unavailable: You';
       displayTextOnScreen(displayText.innerText);
       console.log('This is a selected_cell_rima cell');
     }else if (cell.classList.contains('selected_cell_rima_user')) {
-        // Display text for class2 cells
+        // Display text for selected_cell_rima_user cells
         displayText.innerText = 'Available: You and Rima   Unavailable:';
         displayTextOnScreen(displayText.innerText);
         console.log('This is a selected_cell_rima_user cell');
       }
     else {
-      // Display default text for other cells
+      //display default text for other cells
       displayText.innerText = 'Available: You    Unavailable: Rima';
       displayTextOnScreen(displayText.innerText);
       console.log('Available: You Unavailable: Rima');
