@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RAPID</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Bootstrap URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">RAPID</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>This message is in reference to Brian Brown's application for disability benefits... </p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Mr. Grant has been in DHS custody since his removal...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>As discussed above, he has a history of severe physical abuse and ...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/rima.jpeg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Rima Rebei</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Rima Rebei</h6>
+              <span>Psychiatrist, M.D.</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="https://stuff.mit.edu/people/rebei/">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#"> 
+          <i class="bi bi-people"></i><span>Patient Lookup</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="index.html">
+              <i class="bi bi-circle"></i><span>Ann Thomkins</span>
+            </a>
+          </li>
+          <li>
+            <a href="jim.html">
+              <i class="bi bi-circle"></i><span>Jim Parker</span>
+            </a>
+          </li>
+          <li>
+            <a href="brian.html">
+              <i class="bi bi-circle"></i><span>Brian Brown</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav -->
+
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Patient Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-9">
+          <div class="row">
+
+            <!-- Patient Card -->
+            <div class="col-xxl-5 col-md-5">
+              <div class="card info-card sales-card">
+
+
+                <div class="card-body">
+                  <h5 class="card-title">Ann Thomkins <span></span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="ps-3">
+                      <span class="text-success medium pt-1 fw-bold">DOB(Age)</span><span class="text-muted medium pt-2 ps-1">May 14, 1963 (54)</span> <br>
+                      <span class="text-success medium pt-1 fw-bold">Sex</span><span class="text-muted medium pt-2 ps-1">F</span> <br>
+                      <span class="text-success medium pt-1 fw-bold">SSN</span> <span class="text-muted medium pt-2 ps-1">987-55-2452</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Patient Card -->
+            <!-- Patient Summary Card -->
+            <div class="col-xxl-7 col-md-7">
+              <div class="card info-card sales-card">
+
+
+                <div class="card-body">
+                  <h5 class="card-title">Summary <span></span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="ps-3">
+                      <span class="text-muted small pt-2 ps-1">Ann has a substantial history of depression and substance use. She continues to struggle with low mood, anxiety, marked symptoms of PTSD.
+                  Her functional impairments are substantial barriers for her
+                        to return to work.</span>
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Patient Card -->
+
+
+
+            <!-- Timeline -->
+            <div class="col-12">
+              <div class="card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Timeline<span>/Last Updated Today</span></h5>
+
+                  <!-- Line Chart -->
+                  <div id="reportsChart"></div>
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new ApexCharts(document.querySelector("#reportsChart"), {
+                        series: [{
+                          name: 'Anger',
+                          data: [0, 0, 0, 0, 0, 0, 0, 60]
+                        }, {
+                          name: 'Anxiety',
+                          data: [60, 80, 50, 50, 50, 60, 90, 60]
+                        },{
+                          name: 'Depression',
+                          data: [50, 50, 50, 80, 50, 50, 50, 60]
+                        },
+                        {
+                          name: 'Hopelessness',
+                          data: [50, 50, 60, 80, 50, 50, 50, 50]
+                        },
+                        {
+                          name: 'Insomnia',
+                          data: [0, 0, 50, 70, 50, 0, 0, 0]
+                        },
+                        {
+                          name: 'Substance abuse',
+                          data: [0, 0, 30, 30, 70, 60, 20, 0]
+                        },
+                        {
+                          name: 'Suicidal thoughts',
+                          data: [0, 0, 50, 80, 60, 0, 0, 70]
+                        }, 
+                        {
+                          name: 'Weight loss',
+                          data: [60, 60, 70, 80, 0, 0, 0, 0]
+                        }],
+                        chart: {
+                          height: 350,
+                          type: 'area',
+                          toolbar: {
+                            show: false
+                          },
+                        },
+                        markers: {
+                          size: 4
+                        },
+                        colors: ['#ff86a5', '#ff795b', '#ffaf50', "#dffc43", "#7ffa4b", "#2ff5ab", "#0af5ed", "#12d3ff", "#0089d6", "#9daaff"],
+                        fill: {
+                          type: "gradient",
+                          gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.3,
+                            opacityTo: 0.4,
+                            stops: [0, 90, 100]
+                          }
+                        },
+                        dataLabels: {
+                          enabled: false
+                        },
+                        stroke: {
+                          curve: 'smooth',
+                          width: 2
+                        },
+                        xaxis: {
+                          type: 'datetime',
+                          categories: ["05/15/09", "09/01/09", "09/16/09", "09/25/09", "09/30/09", "11/20/09", "12/17/09", "01/15/10"]
+                        },
+                        tooltip: {
+                          x: {
+                            format: 'MM/dd/yy'
+                          },
+                        }
+                      }).render();
+                    });
+                  </script>
+                  <!-- End Line Chart -->
+
+                </div>
+
+              </div>
+            </div><!-- End Timeline-->
+
+            <!-- Medical History -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Psychiatric History <span>| This Year</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Symptom </th>
+                        <th scope="col">Notes</th>
+                        <th scope="col">Flags</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">5/15/2009</a></th>
+                        <td>Anxiety</td>
+                        <td><a href="#" class="text-primary">Felt too anxious to participate in a 60-minute session</a></td>
+                        <td><button type="button" class="btn btn-warning btn-sm"><i class="bi bi-exclamation-triangle"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/1/2009</a></th>
+                        <td>Anxiety</td>
+                        <td><a href="#" class="text-primary"> Continued anxiety</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/16/2009</a></th>
+                        <td>Hopelessness</td>
+                        <td><a href="#" class="text-primary">Stated “I can't do this anymore”</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">03/21/23</a></th>
+                        <td>Weight loss</td>
+                        <td><a href="#" class="text-primar">Approximately 23 lbs. lost in three months</a></td>
+                        <td><button type="button" class="btn btn-danger btn-sm"><i class="bi bi-exclamation-octagon"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/25/2009</a></th>
+                        <td>Suicidal thoughts</td>
+                        <td><a href="#" class="text-primary"> </a></td>
+                        <td><button type="button" class="btn btn-warning btn-sm"><i class="bi bi-exclamation-triangle"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/25/2009</a></th>
+                        <td>Insomnia</td>
+                        <td><a href="#" class="text-primary"> </a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/25/2009</a></th>
+                        <td>Hopelessness</td>
+                        <td><a href="#" class="text-primary">Increased</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/25/2009</a></th>
+                        <td>Depression</td>
+                        <td><a href="#" class="text-primary">Increased</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/30/09</a></th>
+                        <td>Suicidal thoughts</td>
+                        <td><a href="#" class="text-primary">Denied suicidal ideation but stated “I just want to end the pain.”</a></td>
+                        <td><button type="button" class="btn btn-warning btn-sm"><i class="bi bi-exclamation-triangle"></i></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">9/30/09</a></th>
+                        <td>Substance abuse</td>
+                        <td><a href="#" class="text-primary">Uses alcohol to calm herself and get through the day</a></td>
+                        <td><button type="button" class="btn btn-warning btn-sm"><i class="bi bi-exclamation-triangle"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">11/20/09</a></th>
+                        <td>Anxiety</td>
+                        <td><a href="#" class="text-primary">Decreased but her symptoms shifted day to day</a></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">12/17/09</a></th>
+                        <td>Anxiety</td>
+                        <td><a href="#" class="text-primary">Called 911 due to heightened anxiety and difficulty speaking</a></td>
+                        <td><button type="button" class="btn btn-warning btn-sm"><i class="bi bi-exclamation-triangle"></i></button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">11/20/09</a></th>
+                        <td>Suicidal thoughts</td>
+                        <td><a href="#" class="text-primary">Discontinued maintaining her blood sugar stating, “I don’t care”</a></td>
+                        <td><button type="button" class="btn btn-danger btn-sm"><i class="bi bi-exclamation-octagon"></i></button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">1/15/10</a></th>
+                        <td>Anger</td>
+                        <td><a href="#" class="text-primary">Felt agitated</a></td>
+                        <td></td>
+                      </tr>
+
+                      
+              
+              
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Medical History -->
+
+            <!-- Clinical Raw Text -->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Medical History Report <span></span></h5>
+              </div>
+                <!-- Default Accordion -->
+                <div class="accordion" id="accordionExample">
+                  
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Introduction
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>Ann </strong>is a 52-year-old white female with an extensive history of psychiatric concerns including
+                        <strong>major depressive disorder</strong> and <strong>post-traumatic stress disorder (PTSD)</strong>. She has short blonde hair
+and is average height (5’5) and weight. Most times she is well-groomed, although when she is
+symptomatic, she appears disheveled. Ann’s behavior varies quite a bit in her therapy visits to
+Community Health Center. At times she is calm, easy to engage, and able to tolerate a 45 minute
+meeting. More often than not, she is visibly anxious and agitated, fidgeting in her seat and
+asking, “Are we done yet?” She tends to change topics abruptly, particularly when discussing
+something emotionally painful.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Personal History
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Ann was born in Any Town, State, and recalls her childhood as difficult. Ann recalls abuse
+                        during her childhood, mainly at the hands of her father. Ann states that there was “no predicting”
+                        how her father would behave, especially when he drank alcohol. He was, by her report,
+                        emotionally, verbally, and physically abusive. She becomes visibly agitated and often tearful
+                        when asked about this, and will share only a little information. She says it’s too hard for her to
+                        talk about, though much time has passed since the trauma. <br>
+                        Ann completed high school and recalls her school experience as negative. “I hung around all the
+other misfits,” she said. She reported a great deal of truancy and said, “I’m surprised I
+graduated.” She also completed vocational training following her high school education.<br>
+Ann was married, but has been divorced for over 15 years. She recalls that her marriage was hard
+and that her husband physically abused her. Ann reports that she moved to Another City when
+she married. Her husband was a window washer and also, by her report, a compulsive gambler.
+She states he was abusive to her, but again, has a great deal of trouble discussing it in any detail
+before becoming agitated, anxious, and tearful. She did not work when her children were young. <br>
+Ann reports that when she returned to Any Town after leaving her marriage, she and her children
+stayed with her sister. She states that her sister’s boyfriend at the time was a drug dealer, and
+raped her. She reported this to her sister and mother after he was incarcerated for drugs. She
+never sought police involvement, but this event continues to cause her significant distress. <br>
+She currently is doubling up with friends and family. She has one sister and two brothers, and
+reports that her relationship with all of them is poor. She has two children ages 31 and 29; her relationship with her children is also strained. Recently she suffered a death in her family which
+has caused her significant distress.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Substance Use History
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Ann has a substantial substance use history, reporting that she first started drinking at the age of
+14. In the short-term, using alcohol helps dull her symptoms of depression and anxiety. “It
+relieves me of my worries.” When she abstains from alcohol, not only do the symptoms return,
+they often return worse than before the alcohol use. Her feelings surrounding her alcohol use
+cause her significant stress and anxiety. Ann demonstrates anxiety and agitation in the presence
+and absence of alcohol. Ann maintains that she drinks “not to get drunk, just enough to make me
+feel better.” Alcohol helps numb her feelings and symptoms. In session, this writer has witnessed
+Ann be much calmer when she has been drinking. For the most part, when she is not drinking,
+she is visibly anxious, agitated and cannot tolerate a therapy session. <br>
+Throughout periods of sobriety and relapse, she has continued to experience symptoms. She has
+attempted Alcoholics Anonymous, and while she often states intention to return, she expresses a
+great deal of distress at the thought of it. At the onset of treatment, she formed relationships with
+people in the AA program, but slowly over time has isolated herself from all but one of them. In
+recent months, Ann’s symptoms have worsened due to a variety of factors and her substance use
+has increased. <br>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Physical Health History
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Ann has diabetes and neuropathy in her feet. Ann receives primary care from Local Health
+Center for diabetes management. In recent months, Ann has stopped testing her blood sugar
+stating, “I just don’t care about it anymore.” This is dangerous for her health and, coupled with
+her understanding of the consequences of such behavior, is being evaluated by her psychiatrist as
+passive suicidal ideation.
+Given her extensive history and dependence on alcohol, Ann has tremors. She has sought
+emergency treatment for her substance use that resulted in a one-day at University Hospital.
+                      <br>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Psychiatric History
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Ann was first diagnosed with major depressive disorder at the age of 35, but experienced
+symptoms for many years prior to that, recalling that her depression began around the age of 17.
+Ann notes that her last inpatient psychiatric hospitalization was in 2010 at University Medical
+Center. Ann’s symptoms vary, but include loss of interest in daily activities (for example,
+reading), a marked decrease in her ability to concentrate, erratic sleep, erratic appetite with
+significant weight loss (approximately 23 lbs. in three months), and suicidal thoughts. Ann
+insists that her Christian beliefs prevent her from committing suicide, yet she reports suicidal
+thoughts. She reports having little to no motivation to get out of bed in the morning and meet her
+daily needs. She also reports feeling overwhelmed by her life situation, along with intermittent
+agitation, especially when she is in conflict with her family.<br>
+Ann first presented to Community Health Center (CHC) in 2009, complaining of low mood,
+decreased sleep, decreased appetite, racing thoughts, suicidal thoughts, heightened anxiety, and
+significant agitation. Ann sought medical attention for diabetes and mental health care for major
+depression, and continues to receive care at CHC. <br>
+Throughout her treatment at CHC she has expressed feelings of worthlessness and helplessness
+regarding her life situation. Prior to seeking treatment at CHC, she reported several ER visits for
+suicidal ideation, agitation, and substance use.<br>
+On 5/15/2009 Ann had a psychiatric evaluation and exhibited increased anxiety and constricted
+affect. Ann also demonstrated difficulty tolerating therapeutic sessions. She felt too anxious to
+participate in a 60-minute session.<br>
+Ann missed several follow-up appointments and returned to CHC in September 2009
+experiencing significant anxiety and distress. On 9/16/09 she reported feelings of frustration and
+hopelessness stating, “I can’t do this anymore.” Around this time, Ann was awaiting a decision
+on her SSI/SSDI application and was experiencing significant distress over it.<br>
+On 9/25/09 she met with a new psychiatrist who noted that Ann was experiencing worsening
+depression with hopelessness, insomnia, loss of appetite, and significant weight loss (17 pounds
+in 2 months). She also noted passive suicidal ideation.<br>
+On 9/30/09 Ann continued to express her difficulty abstaining from substances stating that she
+uses alcohol to calm herself and get through the day. Ann stated, “I’m just not functioning well.”
+At this time, she denied suicidal ideation, but stated, “I just want to end the pain.”<br>
+On 11/20/09 Ann had improved mood and decreased anxiety, but her symptoms shifted day to
+day. During this time, she called her therapist as many as four times a day to express concern and
+anxiety surrounding a variety of life situations, including her SSI application.<br>
+On 12/17/09 Ann called 911 due to heightened anxiety and difficulty speaking. She was
+evaluated by an EMT and had elevated blood sugar and normal blood pressure.<br>
+On 1/15/10, Ann reported being agitated, angry, and had discontinued maintaining her blood
+sugar stating, “I don’t care.” This continues to be assessed by both therapist and psychiatrist as
+passive suicidal behavior. <br>
+Ann continues to receive psychiatric care at CHC and in recent weeks has missed several
+appointments. Her treatment team worked closely with Ann to improve her mood, decrease
+anxiety, and support her use of coping mechanisms. Her therapist and psychiatrist diagnosed her
+with PTSD stemming from flashbacks of past abuses by her father and ex-husband. Her other
+symptoms of PTSD include “constant” feelings of guilt and worthlessness, agitation (which
+worsens around her family), and suicidal thoughts “whenever I slow down.” She reports the
+suicidal thoughts are usually related to crises that are happening in the present, but occasionally
+happen for no reason.<br>
+In recent weeks, she has missed several appointments due to anxiety that makes it difficult for
+her to engage in treatment. She stated, “I feel as if I am just surviving,” and expressed dismay at
+being unable to function. Her treatment team continues to work with her to get her into
+treatment, but this is an on-going struggle.<br>
+Ann was recently admitted to Research Hospital and subsequently to University Hospital. Ann
+left University Hospital within a week of that admission. She described it as “chaotic and
+overwhelming.” She said people were stealing from each other and that the staff was not “gentle”
+in their communication. This episode appeared to trigger her PTSD, including fear for her own
+safety and hypervigilance. She is still so traumatized from the experience that she brought her
+niece with her to a CHC visit in order to make sure she understood and remembered what
+transpired in the session. <br>
+                      <br>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Functional Information
+                      </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>Understand, Remember, or Apply Information</strong><br>
+Ann continues to express interest in employment, but her current mental health symptoms limit
+her ability to function in a work environment, particularly with applying information. Ann
+admits that when she works, her symptoms are greatly compounded and she has difficulty
+dealing with the stress and job expectations. For example, while working as a nurse, on numerous occasions, Ann was unable to convey detailed medical information to the medical
+team. Likewise, Ann was unable to apply housekeeping procedures which affected her job
+performance because she was unable to perform the minimal requirements of her job. As a result,
+Ann was placed on probation, and subsequently fired. <br>
+<strong>Interact with Others</strong> <br>
+Ann demonstrates marked difficulty in interacting with others when trying to navigate work
+situations and daily life. Ann has a tenuous relationship with her family: she has continual
+conflicts and altercations with her mother and other family members which, at times, escalates to
+crisis. She reports a great deal of conflict with her mother, with whom she sporadically stays,
+and her sister, with whom she also sporadically stays. While her family is her support, they also
+cause her significant anxiety and pain. When Ann is in crisis, the family conflict escalates
+quickly. In turn, family conflict increases her symptoms which include flashbacks, agitation, and
+anxiety. <br>
+Ann states that she prefers to be by herself rather than surrounded by others. As noted above, she
+feels pressured to establish social relationships, but has little desire to do so. She has difficulty
+interacting with individuals with whom she already has relationships and chooses to isolate
+herself from them. In addition, she has significant anxiety interacting with new people and
+groups, and attempts to avoid social situations. She reports that interpersonal interactions make
+her anxious, agitated, and uncomfortable.<br>
+Ann states outright, “I don’t trust men.” She attributes this to most of her interactions with men
+being negative and threatening, beginning with her abusive father, continuing with her abusive
+husband, and including her sister’s former boyfriend who raped her. It is difficult for her to
+articulate if this is a change, or just something she has become aware of recently. She cannot
+describe a fulfilling social relationship in her life. Her PTSD and depression prevents her from
+experiencing emotional stability for any length of time. Ann has expressed difficulty interacting
+with many individuals, but even more so with males. Her PTSD and past traumas hinder all
+interactions.
+Ann has expressed, especially in recent months, significant difficulty being in or around large
+groups of people. In particular, being out in public is very distressing to her. She relies on family
+members to bring her to appointments because she cannot tolerate the crowds on public
+transportation. When she is in public, she feels overwhelming anxiety and fear. Her inability to
+interact with others and complete tasks compromises her workplace performance.
+<br>
+<strong>Concentrate, Persist, or Maintain Pace</strong>
+Ann exhibits limitations in concentration. Her concentration varies from day-to-day and tends to
+be dependent on multiple factors: her anxiety level, her blood sugar level (which is unknown at
+this point, as she is not currently monitoring it), the medications she takes, fears surrounding
+substance use, and family conflict. Overall, she describes her concentration as “much worse in
+the last several months.” She brought her niece to her last therapy session, stating, “I can’t pay
+attention or remember anything right now.” She also reports getting easily lost, experiencing fears about getting lost, and short-term memory deficits. Ann’s behavior varies quite a bit in her
+therapy visits to Community Health Center.<br>
+<strong>Adapt or Manage Oneself</strong>
+Ann reports limitations in adapting and managing herself especially when she is symptomatic.
+Ann has presented in therapy in many different mental states. At times she is calm and able to
+engage. At other times she raises her voice and paces around this small office. During agitated
+sessions she has asked to abruptly end the session. She exhibits psychomotor agitation, pressured
+speech, and anxiety. When she is anxious out of session, she calls this writer repeatedly, leaving
+consecutive voice mail messages containing the same information. Sometimes she calls every
+hour until this writer returns her call. At times she is calm, easy to engage, and able to tolerate a
+45-minute meeting. More often than not, she is visibly anxious and agitated, fidgeting in her seat
+and asking, “Are we done yet?” She tends to change topics abruptly, particularly when
+discussing something emotionally painful.<br>
+Ann has difficulty expressing anger and coping with conflict. She finds conflict threatening and
+fears retaliation, even when no real threat exists. Ann views most situations as threatening and
+becomes quite fearful, even in the absence of conflict. Ann has attempted employment on
+numerous occasions, but each time, she has been unable to maintain the job. In past professional settings, conflict was a barrier to success because fear prevented her from solving issues with co-
+workers and supervisors. She has difficulty managing expectations of co-workers and supervisors and handling the day-to-day stressors of a job. She avoids issues and is unable to
+resolve conflicts. <br>
+She has trouble waking in the morning and trouble sleeping through the night. She reports that
+she knows how to cook, but has little motivation to do so. Ann used to keep up with her
+household chores, but now she has little motivation or desire due to depression. At a recent
+appointment, she presented disheveled and was wearing slippers. Her deficits in ADLs stem from her lack of motivation and feelings of worthlessness that hinder her ability to complete day-
+to-day tasks. Ann’s day consists of staying at home and trying to make it through the day. She wakes up most
+mornings around 10-11a.m. and says, “It’s an effort just to get out of bed.” She notes constant
+feelings of guilt, worthlessness, agitation, and suicidal thoughts.
+
+                      <br>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Default Accordion Example -->
+  
+              </div>
+            </div><!-- End Clinical Raw Text -->
+
+          </div>
+        </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-3">
+
+          <!-- Recent Symptoms -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filter</h6>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Recent Activity <span></span></h5>
+
+              <div class="activity">
+                <div class="activity-item d-flex">
+                  <div class="activite-label">1 day </div>
+                  <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                  <div class="activity-content">
+                    Missed appointment, stated <a href="#" class="fw-bold text-dark"> “I feel as if I am just surviving”</a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">1 week</div>
+                  <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                  <div class="activity-content">
+                    Left University Hospital, described it as <a href="#" class="fw-bold text-dark">“chaotic and
+                      overwhelming"</a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">2 weeks</div>
+                  <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                  <div class="activity-content">
+                    Admitted to Research Hospital and subsequently to University Hospital
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">3 weeks</div>
+                  <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                  <div class="activity-content">
+                    Missed appointment
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">1 month</div>
+                  <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                  <div class="activity-content">
+                    Diagnosed with <a href="#" class="fw-bold text-dark">PTSD</a> stemming from flashbacks of past abuses
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">1 month</div>
+                  <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
+                  <div class="activity-content">
+                    Reported suicidal thoughts <a href="#" class="fw-bold text-dark">“whenever I slow down.”</a>
+                  </div>
+                </div><!-- End activity item-->
+
+              </div>
+
+            </div>
+          </div><!-- End Recent Symptoms -->
+
+
+
+        </div><!-- End Right side columns -->
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      <strong><span>RAPID: Reading-Assisted PTSD Insight and Diagnosis</span></strong>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Bootstrap Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
